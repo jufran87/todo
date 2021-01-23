@@ -1,7 +1,10 @@
-import { saludar } from './js/componentes';
 import './styles.css';
+import { Todo, TodoList } from './classes'; //en la carpeta classes hay un archivo index.js que contiene todas las clases exportables
 
-const nombre = document.querySelector('#txtNombre');
+const tarea = new Todo('Aprender Javascript');
+const tarea2 = new Todo('Comprar un unicornio');
+const todoList = new TodoList();
 
-const boton = document.querySelector('#btnSaludar');
-boton.addEventListener('click', () => saludar(nombre.value));
+console.log(tarea);
+console.log(tarea2);
+console.log(todoList);
