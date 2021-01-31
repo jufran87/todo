@@ -1,8 +1,20 @@
-import '../css/componentes.css';
+// Referencias en el HTML
+const divTodoList = document.querySelector('.todo-list');
 
-// export const saludar = nombre => {
-//   console.log('Creando etiqueta h1');
-//   const h1 = document.createElement('h1');
-//   h1.innerText = `Hola ${nombre}, ¿cómo vas?`;
-//   document.body.append(h1);
-// };
+export const crearTodoHtml = todo => {
+  const htmlTodo = `<li class="completed" data-id="abc">
+    <div class="view">
+        <input class="toggle" type="checkbox" checked>
+        <label>${todo.tarea}</label>
+        <button class="destroy"></button>
+    </div>
+    <input class="edit" value="Create a TodoMVC template">
+    </li> `;
+
+  // Crear el elemento HTML
+  const div = document.createElement('div');
+  div.innerHTML = htmlTodo;
+  divTodoList.append(div);
+
+  return div;
+};
