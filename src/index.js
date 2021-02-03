@@ -3,7 +3,7 @@ import { Todo, TodoList } from './classes'; //en la carpeta classes hay un archi
 import { crearTodoHtml } from './js/componentes';
 
 const tarea = new Todo('Aprender Javascript');
-const todoList = new TodoList();
+export const todoList = new TodoList();
 
 console.log(tarea);
 console.log(todoList);
